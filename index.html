@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HW Train Activity</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</head>
+
+<body>
+    <div class="jumbotron">
+        <div class="row">
+            <div class="container text-center">
+                    <h1 class="display-4"><strong>Welcome to the Disney Express</strong></h1>
+                <br>
+                <p>All Aboard!!!</p>
+                <span class="glyphicon glyphicon-folder-open"></span>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card">
+            <h5 class="card-header"><strong>Current Train Schedule</strong></h5>
+        </div>
+        <table class="Table">
+            <thead>
+                <tr>
+                    <th scope="col">Train Name</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Frequency (min)</th>
+                    <th scope="col">Next Arrival</th>
+                    <th scope="col">Minutes Away</th>
+                </tr>
+            </thead>
+            <tbody id="trainTable">
+                <tr>
+                    <td class="tdTrainName"></td>
+                    <td class="tdDestination"></td>
+                    <td class="tdFrequency"></td>
+                    <td class="tdNextArrival"></td>
+                    <td class="tdMinutesAway"></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="card">
+            <h5 class="card-header">Add Train</h5>
+        </div>
+        <form>
+            <div class="form-group">
+                <label for="trainName">Train Name</label>
+                <input type="trainName" class="form-control" id="trainName" aria-describedby="trainHelp" placeholder="Enter Train Name">
+            </div>
+            <div class="form-group">
+                <label for="destination">Destination</label>
+                <input type="destination" class="form-control" id="destination" aria-describedby="destination" placeholder="Train Destination">
+            </div>
+            <div class="form-group">
+                <label for="firstTrainTime">First Train (HH:mm-military time)</label>
+                <input type="firstTrainTime" class="form-control" id="firstTrainTime" aria-describedby="firstTrainTime" placeholder="First Train">
+            </div>
+            <div class="form-group">
+                <label for="frequency">Frequency (min)</label>
+                <input type="frequency" class="form-control" id="frequency" aria-describedby="frequency" placeholder="Frequency">
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary" id="addTrainButton">Submit</button>
+            
+
+        </form>
+    </div>
+    <!-- Script -->
+    <script src="assets/javascript.js"></script>
+   
+</body>
+
+</html>
